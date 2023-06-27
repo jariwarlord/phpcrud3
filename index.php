@@ -18,6 +18,17 @@
             PHP Crud Application
         </nav>
     <div class="container">
+        <?php
+        if(isset($_GET['msg'])){
+            $msg = $_GET['msg'];
+            echo'<div class="alert alert-warning alert-dismissible fade show" role="alert">
+                '.$msg.'
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                 </div>';
+                }
+        ?>
         <a href="add_new.php" class="btn btn-dark mb-3">Add New</a>
         <table class="table table-hover text-center">
   <thead class="table-dark">
@@ -44,9 +55,9 @@
                     <th><?php echo $row['email']?></th>
                     <th><?php echo $row['genre']?></th>
                     <td>
-                        <a href="" class="link-dark"><i class="fa-solid fa-pen-to-square
+                        <a href="edit.php=id"<?php echo $row ?> class="link-dark"><i class="fa-solid fa-pen-to-square
                         fs-5 me-3"></i></a>
-                        <a href="" class="link-dark"><i class="fa solid fa-trash fs-5"></i></a>
+                        <a href="delete.php=id"<?php echo $row ?> class="link-dark"><i class="fa solid fa-trash fs-5"></i></a>
                     </td>
                 </tr>          
             <?php
