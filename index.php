@@ -53,11 +53,11 @@
                     <th><?php echo $row['first_name']?></th>
                     <th><?php echo $row['last_name']?></th>
                     <th><?php echo $row['email']?></th>
-                    <th><?php echo $row['genre']?></th>
+                    <th><?php echo $row['gender']?></th>
                     <td>
-                        <a href="edit.php=id"<?php echo $row ?> class="link-dark"><i class="fa-solid fa-pen-to-square
+                        <a href="edit.php=id=<?php echo $row ?>" class="link-dark"><i class="fa-solid fa-pen-to-square
                         fs-5 me-3"></i></a>
-                        <a href="delete.php=id"<?php echo $row ?> class="link-dark"><i class="fa solid fa-trash fs-5"></i></a>
+                        <a href="delete.php=id<?php echo $row ?>" class="link-dark"><i class="fa solid fa-trash fs-5"></i></a>
                     </td>
                 </tr>          
             <?php
