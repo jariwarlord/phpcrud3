@@ -42,6 +42,17 @@ if(isset($_POST['submit'])){
         </nav>
     <div class="container">
         <div class="text-center mb-4">
+            <?php
+            if(isset($_GET['msg'])){
+                $msg = $_GET['msg'];
+                echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+                      '.$msg.'
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>';
+                  }
+            ?>
         <h3>Add New User</h3>
         <p class="text-muted">Complete the form below to add new user</p>
 
